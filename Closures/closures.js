@@ -88,28 +88,20 @@
 // function factories - as the name suggests with the help of closures we can generate functions 
 // take a look at the below example it is same as 2 number's example but take a look
 
-// function counter(){
-//     let count = 1; 
-//     function increase(){
-//         count++
-//         return count
+// function add(num){
+//     function increase(incby){
+
+//         return num+incby
 //     }
-//     function decrease(){
-//         count--;
-//         return count
-//     }
-//     function print(){
-//         return count
-//     }
-//     return {increase, decrease, print}
+// return increase
 // }
 
-// let first = counter();
-// let second = counter();
-// first.increase();//2
-// console.log(first.print())// print 2
-// first.increase();//3
-// console.log(second.print()) // print 1
+// let first = add(3);
+// let firstOp = first(5)
+// let second = add(5);
+// let secondOp = second(5)
+// console.log(firstOp,secondOp);
 
-// in the 
+
+// in the above code we can generate as many functions we want and manipulate them with our input data that is handled by closures
 

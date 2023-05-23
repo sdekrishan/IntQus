@@ -1,15 +1,4 @@
-// closures 
-// ans - with the help of closures functions can access variables of its parent's environment.
+// some general questions
 
-// //Example
-// let name = "Byee";
-// function a() {
-
-//   let name = "Heyy";
-//   return function b() {
-//     console.log(name);
-//   };
-// } 
-
-//promises
-// so promises are the way to handle asynchronus operations efficiently
+// scopes
+// before es6 javascript has only 2 scopes 

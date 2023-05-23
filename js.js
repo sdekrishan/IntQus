@@ -9,4 +9,7 @@
 //   return function b() {
 //     console.log(name);
 //   };
-// }
+// } 
+
+//promises
+// so promises are the way to handle asynchronus operations efficiently

@@ -28,7 +28,7 @@ function setupHelp() {
 
     // do you get the desired result with the help of above for loop -> no
     // because the moment we create closure( let me tell you where we create closure 
-    //think as setupHelp function as outer and fucntions associated with onfocus event is inner function so it created a closure but we have a loop.
+    //think as setupHelp function as outer and functions associated with onfocus event is inner function so it created a closure but we have a loop.
     // so we form three closures for email, name and age)
     // now onfocus function(inner functions) has access to same lexical environment that is setupHelp functions' environment
     // and we have "item" which is declared by var due to hoisting it has only function scope. so every time we iterating our loop 

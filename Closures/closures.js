@@ -103,5 +103,69 @@
 // console.log(firstOp,secondOp);
 
 
-// in the above code we can generate as many functions we want and manipulate them with our input data that is handled by closures
+// in the above code we can generate as many functions we want and manipulate them with our input data that is handled by closures.
 
+// some code snippets related to closures - 
+// tips- always remember hoisting concepts while attempting the closures.
+
+// qus 1. ->
+// function outer() {
+
+//     let x = 10;
+    
+//     function inner() {
+    
+//     var y = 5;
+    
+//     console.log(x + y);
+    
+//     x = 20;
+    
+//     }
+    
+//     return inner;
+    
+//     }
+    
+//     var innerFunc = outer();
+    
+//     innerFunc(); ->15
+//     innerFunc(); ->25
+
+// qus 2 -> it is the common question which will you see in closures
+// for(var i = 0; i < 5; i++){
+//    setTimeout(()=>{
+//    console.log(i)
+// },1000)
+// }
+// always ask why -> here problem is not with closures problem is with hoisting because we declare our loop with var
+// which only have function scope and global scope so when our loop is working it changes the value of i on every iteration
+// and because of setTimeout web api it is going to event loop. so we assign 1sec of time to i and after 1sec when our setTimeout
+// enters in our call stack at that time our for loop has been executed and because of var its value becomes now 5.
+// so we have 5 webapi of settimeout and it gives us 5 as output 5 times after 1 sec.
+
+// how to solve this -> with the help of closures 
+// if we give each i an another/separate lexical environment so they can access separate values
+// for example -
+// for(var i = 0; i < 5; i++){
+//     function look(i){
+//         setTimeout(()=>{
+//             console.log(i)
+//         },1000)
+//     }
+//     look(i)
+// }
+
+// now we starts create a closure on line no. 151 with the help of closure setTimeout has access to its parent's 
+// environment which is i and for 5 setTimeout it has different lexical environment so at that time when they executing in 
+// event loop or enter is call stack they have access to their lexical environment variable. that's how we get
+// 0,1,2,3,4 after 1 sec.
+
+// the other solution would be - 
+
+// for(let i = 0; i < 5; i++){
+//         setTimeout(()=>{
+//             console.log(i)
+//         },1000)
+// }
+// because let has block scope it will assign value to setTimout different and never overrides it value

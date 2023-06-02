@@ -16,3 +16,5 @@ Now browsers have layout engines which have three modes
 now with the help of doctype we can tell our browser when to use quirks mode? if we don't initialize our page with <!Doctype> that means we want to enable quirks mode in our site.
 
 
+
+

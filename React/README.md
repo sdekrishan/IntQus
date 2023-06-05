@@ -20,3 +20,5 @@ Some events in the React or we can say some synthetic event may be different fro
 ### 2. Controlled vs uncontrolled components
 
 the main difference between them in only state where use of state is mandatory in controlled component and in uncontrolled component we use Refs. In controlled components, component is controlled by state and in uncontrolled, component is controlled by DOM. 
+
+controlled component cannot manage its internal state while uncontrolled component does
